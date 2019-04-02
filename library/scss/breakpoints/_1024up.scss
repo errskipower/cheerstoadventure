@@ -1,0 +1,53 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+.inner-header {
+  width: 96%;
+  margin: 0 auto;
+}
+
+#logo {
+  a .logo-image {
+    width: 300px;
+  }
+}
+
+.desktop-nav {
+  font-size: 18px;
+  li {
+    margin: 0 16px;
+  }
+}
+
+.entry-content {
+  p {
+    font-size: 16px;
+  }
+}
+
+.section-title {
+  font-size: 28px;
+}
+
+.section-content {
+  &.featured-shortcode-section .portfolio_single_wrapp .mask-contents a h4,
+  .featured-post .featured-post-title {
+    font-size: 16px;
+  }
+}
+
+.footer {
+  font-size: 14px;
+}
+
+.copyright {
+  font-size: 12px;
+}
