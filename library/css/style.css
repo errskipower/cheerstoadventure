@@ -3170,23 +3170,30 @@ This is for the larger monitors and possibly full screen viewers.
   }
 
   /* line 23, ../scss/breakpoints/_1240up.scss */
+  .post, article.page {
+    width: 80%;
+    margin: 30px auto 0;
+    max-width: 1200px;
+  }
+
+  /* line 30, ../scss/breakpoints/_1240up.scss */
   .section-content {
     font-size: 16px;
   }
-  /* line 26, ../scss/breakpoints/_1240up.scss */
+  /* line 33, ../scss/breakpoints/_1240up.scss */
   .section-content.featured-shortcode-section .portfolio_single_wrapp .mask-contents a h4,
   .section-content .featured-post .featured-post-title {
     font-size: 14px;
   }
-  /* line 31, ../scss/breakpoints/_1240up.scss */
+  /* line 38, ../scss/breakpoints/_1240up.scss */
   .section-content .featured-post .featured-post-title {
     margin-top: 15px;
   }
-  /* line 35, ../scss/breakpoints/_1240up.scss */
+  /* line 42, ../scss/breakpoints/_1240up.scss */
   .section-content .featured-post-img-wrap {
     background: none;
   }
-  /* line 38, ../scss/breakpoints/_1240up.scss */
+  /* line 45, ../scss/breakpoints/_1240up.scss */
   .section-content .featured-post-img-wrap img {
     position: absolute;
     width: 100%;
@@ -3195,7 +3202,7 @@ This is for the larger monitors and possibly full screen viewers.
     margin: auto;
   }
 
-  /* line 48, ../scss/breakpoints/_1240up.scss */
+  /* line 55, ../scss/breakpoints/_1240up.scss */
   .footer {
     padding-top: 14px;
   }

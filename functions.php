@@ -215,7 +215,6 @@ function bones_comments($comment, $args, $depth) {
         </section>
         <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
     </article>
-  </div>
 
 <?php
 
