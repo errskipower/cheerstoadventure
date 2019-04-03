@@ -255,3 +255,27 @@ mobile. Make sure to double check these!
 .testimonial .testimonial-author {
   font-size: 12px;
 }
+
+/*********************
+PRICING STYLES
+*********************/
+
+.pricing-image-wrap {
+  width: 30%;
+  display: inline-block;
+  float: left;
+
+  img {
+    width: 100%;
+  }
+}
+
+.pricing-content-wrap {
+  display: inline-block;
+  width: 65%;
+  margin-left: 5%;
+
+  .section-title:first-of-type {
+    margin-top: -10px;
+  }
+}

@@ -31,10 +31,20 @@ $all_titles = $pricings ? array_column($pricings, 'title') : [];
         $title = $pricing['title'];
         $text = $pricing['text'];
         $title_id = str_replace(' ', '-', strtolower($title));
+        $image = $pricing['image'];
       ?>
         <div class="pricing wrap cf" id="pricing-<?= $title_id; ?>">
-          <h3 class="pricing-title section-title"><?= $title; ?></h3>
-          <p class="pricing-text"><?= $text; ?></p>
+          <?php if ($image): ?>
+          <div class="pricing-image-wrap">
+            <div class="pricing-image">
+              <img src="<?= $image['sizes']['large']; ?>" alt="<?= $image['title']; ?>" />
+            </div>
+          </div>
+          <?php endif; ?>
+          <div class="pricing-content-wrap">
+            <h3 class="pricing-title section-title"><?= $title; ?></h3>
+            <div class="pricing-text"><?= $text; ?></div>
+          </div>
         </div>
       <?php endforeach; ?>
     </div>

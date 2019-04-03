@@ -1571,6 +1571,37 @@ PRICING STYLES
 }
 
 .pricings-list {
-  margin-bottom: 25px;
   text-align: center;
+}
+
+.pricing {
+  margin: 35px 0;
+  text-align: center;
+  border-bottom: 1px solid $med-gray;
+
+  .section-title {
+    border-bottom: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.pricing-content-wrap {
+  padding-bottom: 15px;
+}
+
+.pricing-image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 65%;
+  margin-bottom: 25px;
+
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+  }
 }

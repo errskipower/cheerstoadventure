@@ -2663,8 +2663,42 @@ PRICING STYLES
 
 /* line 1573, ../scss/breakpoints/_base.scss */
 .pricings-list {
-  margin-bottom: 25px;
   text-align: center;
+}
+
+/* line 1577, ../scss/breakpoints/_base.scss */
+.pricing {
+  margin: 35px 0;
+  text-align: center;
+  border-bottom: 1px solid #d7dadf;
+}
+/* line 1582, ../scss/breakpoints/_base.scss */
+.pricing .section-title {
+  border-bottom: 0;
+  margin-bottom: 5px;
+}
+
+/* line 1588, ../scss/breakpoints/_base.scss */
+.pricing-content-wrap {
+  padding-bottom: 15px;
+}
+
+/* line 1592, ../scss/breakpoints/_base.scss */
+.pricing-image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 65%;
+  margin-bottom: 25px;
+}
+/* line 1598, ../scss/breakpoints/_base.scss */
+.pricing-image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
 }
 
 /*********************
@@ -3020,6 +3054,31 @@ you can add resource intensive styles.
   /* line 255, ../scss/breakpoints/_768up.scss */
   .testimonial .testimonial-author {
     font-size: 12px;
+  }
+
+  /*********************
+  PRICING STYLES
+  *********************/
+  /* line 263, ../scss/breakpoints/_768up.scss */
+  .pricing-image-wrap {
+    width: 30%;
+    display: inline-block;
+    float: left;
+  }
+  /* line 268, ../scss/breakpoints/_768up.scss */
+  .pricing-image-wrap img {
+    width: 100%;
+  }
+
+  /* line 273, ../scss/breakpoints/_768up.scss */
+  .pricing-content-wrap {
+    display: inline-block;
+    width: 65%;
+    margin-left: 5%;
+  }
+  /* line 278, ../scss/breakpoints/_768up.scss */
+  .pricing-content-wrap .section-title:first-of-type {
+    margin-top: -10px;
   }
 }
 /*********************
