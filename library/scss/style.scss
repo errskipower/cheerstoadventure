@@ -69,6 +69,15 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 @import "breakpoints/base";
 
 /*********************
+PLUS MOBILE DEVICES
+This is for devices like the iPhone Plus, Galaxy S10+.
+*********************/
+@media only screen and (min-width: 391px) {
+  // styles in 391up.scss
+  @import "breakpoints/391up";
+} // end of media query
+
+/*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. Let's call them
