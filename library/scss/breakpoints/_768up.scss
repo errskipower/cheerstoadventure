@@ -180,11 +180,17 @@ NAVIGATION STYLES
 PAGES & POSTS
 *********************/
 
+.section-content.entry-content p,
+.section-content.entry-content,
+.entry-content p {
+  font-size: 16px;
+}
+
 .primary-btn,
 .inset-primary-btn,
 .secondary-btn,
 .dark-primary-btn {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .single-title-wrapper {
@@ -214,6 +220,10 @@ PAGES & POSTS
   .featured-post-img-wrap {
     background: $text-color;
   }
+}
+
+.section-content.entry-content p.testimonial-author {
+  font-size: 12px;
 }
 
 /*********************
@@ -278,4 +288,30 @@ PRICING STYLES
   .section-title:first-of-type {
     margin-top: -10px;
   }
+}
+
+/*********************
+COMMENT STYLES
+*********************/
+#comments-title {
+  font-size: 24px;
+}
+  
+.comment:not(.wpcf7-form-control-wrap) { 
+  cite.fn,
+  cite.fn > .url {
+    font-size: 12px;
+  }
+  time {
+    font-size: 10px;
+  }
+}
+
+.comment_content p {
+  font-size: 12px;
+}
+
+.comment-reply-link,
+#submit {
+  font-size: 14px;
 }

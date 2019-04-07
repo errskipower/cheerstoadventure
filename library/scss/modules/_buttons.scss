@@ -25,6 +25,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 *********************/
 
 %btn {
+  background-color: transparent;
   display: inline-block;
   position: relative;
   font-family: $raleway;
@@ -33,11 +34,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   color: $text-color;
   font-size: 16px;
   line-height: 12px;
-  font-weight: normal;
-  padding: 4px 10px;
+  font-weight: bold;
+  padding: 0;
   border: 0;
   cursor: pointer;
-  @include transition(background-color 0.14s ease-in-out);
+  @include transition(color 0.14s ease-in-out);
 
   // hovering on the btn
   &:hover,
@@ -60,17 +61,12 @@ and it will create a button dependant on those variables.
 */
 .primary-btn {
   @extend %btn; // here we load the btn defaults
-  background-color: transparent;
   color: $link-color;
-  font-weight: bold;
-  padding: 0;
 
   &:hover,
   &:focus,
-  &a:hover,
-  &a:focus,
-  &a:link {
-    color: darken($link-color, 45%);
+  &:link {
+    color: darken($link-color, 5%);
     background-color: transparent;
   } // end hover
 
@@ -80,58 +76,48 @@ and it will create a button dependant on those variables.
   &a {
     color: $link-color;
   }
-} // end blue button
+} // end primary button
 
 .secondary-btn {
   @extend %btn; // here we load the btn defaults
-  background-color: $light-gray;
-  color: $text-color;
-
-  &:hover,
-  &:focus {
-    background-color: darken($light-gray, 4%);
-  } // end hover
-
-  &:active {
-    background-color: darken($light-gray, 5%);
-  } // end active
-} // end blue button
-
-.dark-primary-btn {
-  @extend %btn; // here we load the btn defaults
-  background-color: darken($blue, 30%);
-  color: darken($blue, 80%);
+  color: $secondary-color;
 
   &:hover,
   &:focus,
-  &a:hover,
-  &a:focus,
-  &a:link {
-    color: darken($blue, 90%);
-    background-color: darken($blue, 50%);
+  &:active {
+    color: $primary-color;
+  } 
+} // end secondary button
+
+
+.dark-primary-btn {
+  @extend %btn; // here we load the btn defaults
+  color: darken($link-color, 5%);
+
+  &:hover,
+  &:focus,
+  &:link {
+    color: darken($link-color, 10%);
   } // end hover
 
   &:active {
-    background-color: darken($blue, 50%);
+    background-color: darken($link-color, 10%);
   } // end active
 } // end blue button
 
 .inset-primary-btn {
   @extend %btn;
-  @include box-shadow(0, 0, 0, 1px, $blue, true);
-  background-color: transparent;
-  color: darken($blue, 45%);
+  @include box-shadow(0, 0, 0, 1px, $link-color, true);
+  color: darken($link-color, 45%);
 
   &:hover,
   &:focus,
   &a:hover,
   &a:focus,
   &a:link {
-    color: darken($blue, 45%);
-    background-color: darken($blue, 4%);
+    color: darken($link-color, 45%);
   } // end hover
   &:active {
-    background-color: darken($blue, 4%);
-    color: $light-gray;
+    color: $secondary-color;
   }
 }

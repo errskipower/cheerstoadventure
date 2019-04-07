@@ -315,7 +315,7 @@ NAVIGATION STYLES
 }
 /* line 77, ../scss/breakpoints/_768up.scss */
 .desktop-nav li a {
-  color: #fff;
+  color: #fbf8f4;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -327,7 +327,7 @@ NAVIGATION STYLES
 }
 /* line 88, ../scss/breakpoints/_768up.scss */
 .desktop-nav li a:hover, .desktop-nav li a:focus {
-  color: #fff;
+  color: #fbf8f4;
   opacity: 0.7;
 }
 /* line 103, ../scss/breakpoints/_768up.scss */
@@ -378,7 +378,7 @@ NAVIGATION STYLES
 .desktop-nav li ul.children li.current_page_item > a,
 .desktop-nav li ul.children li.current-menu-ancestor > a,
 .desktop-nav li ul.children li.current-menu-parent > a {
-  color: #fff;
+  color: #fbf8f4;
   opacity: 0.5;
 }
 /* line 161, ../scss/breakpoints/_768up.scss */
@@ -391,7 +391,7 @@ NAVIGATION STYLES
 .desktop-nav li.current_page_item > a,
 .desktop-nav li.current-menu-ancestor > a,
 .desktop-nav li.current-menu-parent > a {
-  color: #fff;
+  color: #fbf8f4;
   opacity: 0.5;
 }
 
@@ -400,29 +400,36 @@ NAVIGATION STYLES
 PAGES & POSTS
 *********************/
 /* line 183, ../scss/breakpoints/_768up.scss */
+.section-content.entry-content p,
+.section-content.entry-content,
+.entry-content p {
+  font-size: 16px;
+}
+
+/* line 189, ../scss/breakpoints/_768up.scss */
 .primary-btn,
 .inset-primary-btn,
 .secondary-btn,
 .dark-primary-btn {
-  font-size: 12px;
+  font-size: 16px;
 }
 
-/* line 190, ../scss/breakpoints/_768up.scss */
+/* line 196, ../scss/breakpoints/_768up.scss */
 .single-title-wrapper {
   bottom: 5%;
 }
 
-/* line 194, ../scss/breakpoints/_768up.scss */
+/* line 200, ../scss/breakpoints/_768up.scss */
 .section-title {
   font-size: 26px;
   margin-top: 50px;
 }
-/* line 198, ../scss/breakpoints/_768up.scss */
+/* line 204, ../scss/breakpoints/_768up.scss */
 .section-title:first-of-type {
   margin-top: 30px;
 }
 
-/* line 205, ../scss/breakpoints/_768up.scss */
+/* line 211, ../scss/breakpoints/_768up.scss */
 .section-content.featured-videos-section .featured-video {
   width: 30.76923%;
   float: left;
@@ -446,13 +453,18 @@ PAGES & POSTS
   margin-right: -100%;
   clear: none;
 }
-/* line 210, ../scss/breakpoints/_768up.scss */
+/* line 216, ../scss/breakpoints/_768up.scss */
 .section-content .featured-posts-list {
   margin: 0 0 26px 0;
 }
-/* line 214, ../scss/breakpoints/_768up.scss */
+/* line 220, ../scss/breakpoints/_768up.scss */
 .section-content .featured-post-img-wrap {
   background: #161919;
+}
+
+/* line 225, ../scss/breakpoints/_768up.scss */
+.section-content.entry-content p.testimonial-author {
+  font-size: 12px;
 }
 
 /*********************
@@ -463,24 +475,24 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 229, ../scss/breakpoints/_768up.scss */
+/* line 239, ../scss/breakpoints/_768up.scss */
 .footer-nav li:not(:last-of-type):after {
   padding-left: 6px;
 }
 
-/* line 238, ../scss/breakpoints/_768up.scss */
+/* line 248, ../scss/breakpoints/_768up.scss */
 .social-nav li a:hover,
 .footer-nav li a:hover {
   opacity: 0.8;
 }
 
-/* line 248, ../scss/breakpoints/_768up.scss */
+/* line 258, ../scss/breakpoints/_768up.scss */
 .footer #wdi_feed_0 .wdi_feed_item {
   width: 12.5%;
   margin-left: 0;
 }
 
-/* line 255, ../scss/breakpoints/_768up.scss */
+/* line 265, ../scss/breakpoints/_768up.scss */
 .testimonial .testimonial-author {
   font-size: 12px;
 }
@@ -488,26 +500,55 @@ mobile. Make sure to double check these!
 /*********************
 PRICING STYLES
 *********************/
-/* line 263, ../scss/breakpoints/_768up.scss */
+/* line 273, ../scss/breakpoints/_768up.scss */
 .pricing-image-wrap {
   width: 30%;
   display: inline-block;
   float: left;
 }
-/* line 268, ../scss/breakpoints/_768up.scss */
+/* line 278, ../scss/breakpoints/_768up.scss */
 .pricing-image-wrap img {
   width: 100%;
 }
 
-/* line 273, ../scss/breakpoints/_768up.scss */
+/* line 283, ../scss/breakpoints/_768up.scss */
 .pricing-content-wrap {
   display: inline-block;
   width: 65%;
   margin-left: 5%;
 }
-/* line 278, ../scss/breakpoints/_768up.scss */
+/* line 288, ../scss/breakpoints/_768up.scss */
 .pricing-content-wrap .section-title:first-of-type {
   margin-top: -10px;
+}
+
+/*********************
+COMMENT STYLES
+*********************/
+/* line 296, ../scss/breakpoints/_768up.scss */
+#comments-title {
+  font-size: 24px;
+}
+
+/* line 301, ../scss/breakpoints/_768up.scss */
+.comment:not(.wpcf7-form-control-wrap) cite.fn,
+.comment:not(.wpcf7-form-control-wrap) cite.fn > .url {
+  font-size: 12px;
+}
+/* line 305, ../scss/breakpoints/_768up.scss */
+.comment:not(.wpcf7-form-control-wrap) time {
+  font-size: 10px;
+}
+
+/* line 310, ../scss/breakpoints/_768up.scss */
+.comment_content p {
+  font-size: 12px;
+}
+
+/* line 314, ../scss/breakpoints/_768up.scss */
+.comment-reply-link,
+#submit {
+  font-size: 14px;
 }
 
 /******************************************************************

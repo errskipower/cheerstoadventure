@@ -30,6 +30,8 @@ $base-color: $almond;
 $link-color: $accent-color;
 $link-hover: darken($link-color, 9%);
 
+$white: lighten($base-color, 10%);;
+
 
 ///////////// OLD 
 
@@ -40,7 +42,7 @@ $alert-green: #e6efc2;
 $alert-blue: #d5edf8;
 
 $black: #323944;
-$white: #fff;
+// $white: #fff;
 
 $light-gray: #f5f5f5;
 $gray: #eaedf2;
