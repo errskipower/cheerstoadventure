@@ -22,7 +22,7 @@ $all_titles = $pricings ? array_column($pricings, 'title') : [];
     <div class="pricings-list wrap cf">
       <?php foreach($all_titles as $title): ?>
         <?php $title_id = str_replace(' ', '-', strtolower($title)); ?>
-        <button onclick="scrollPricingIntoView('pricing-<?=$title_id;?>')" class="blue-inset-btn"><?= $title; ?></button>
+        <button onclick="scrollPricingIntoView('pricing-<?=$title_id;?>')" class="inset-primary-btn"><?= $title; ?></button>
       <?php endforeach; ?>
     </div>
     <div class="pricings-section section-content wrap cf">

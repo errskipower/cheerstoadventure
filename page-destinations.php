@@ -95,7 +95,7 @@ $more_posts_button = get_field('more_posts_button');
                 <?php wp_reset_postdata(); ?>
                 </ul>
                 <div class="btn-wrap">
-                  <a href="/category/travel/" alt="blog posts" class="more-btn blue-btn"><?php echo $more_posts_button; ?></a>
+                  <a href="/category/travel/" alt="blog posts" class="more-btn primary-btn"><?php echo $more_posts_button; ?></a>
                 </div>
               </div>
 

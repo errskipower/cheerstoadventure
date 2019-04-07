@@ -298,15 +298,15 @@ function my_acf_init() {
       'keywords'        => ['testimonials', 'testimonial', 'portfolio'],
     ]);
 
-    // register a blue button
+    // register a primary button
     acf_register_block([
-      'name'            => 'blue-button',
-      'title'           => __('Blue Button'),
-      'description'     => __('A custom blue button.'),
+      'name'            => 'primary-button',
+      'title'           => __('Primary Button'),
+      'description'     => __('A custom primary button.'),
       'render_callback' => 'custom_block_render',
       'category'        => 'layout',
       'icon'            => 'admin-links',
-      'keywords'        => ['button', 'blue button', 'blue', 'link'],
+      'keywords'        => ['button', 'primary button', 'primary', 'link'],
     ]);
 
     // register a featured testimonials block

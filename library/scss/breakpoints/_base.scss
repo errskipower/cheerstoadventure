@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Cheers to Adventure
+Author: Emily Roth
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -28,7 +28,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: $text-color;
-  background-color: $light-gray;
+  background-color: $base-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -144,7 +144,7 @@ LINK STYLES
 
 a,
 a:visited {
-  color: $dark-blue;
+  color: $link-color;
 
   /* on hover */
   &:hover,
@@ -163,7 +163,7 @@ a:visited {
     so it basically works like the :hover selector
     for mobile devices.
     */
-    -webkit-tap-highlight-color: rgba($dark-blue, 0.8);
+    -webkit-tap-highlight-color: $link-hover;
   }
 }
 
@@ -248,31 +248,14 @@ HEADER STYLES
   display: table-cell;
 
   a {
-    color: $light-gray;
     text-decoration: none;
     display: block;
     position: relative;
-    text-shadow: rgba($black, 0.2) 0 0 10px;
 
     .logo-image {
       width: 230px;
       height: auto;
     }
-
-    // .logo-script {
-    //   font-family: $playlist;
-    //   font-size: 72px;
-    //   display: block;
-    //   line-height: 26px;
-    // }
-
-    // .logo-sans {
-    //   font-family: $raleway;
-    //   font-size: 13px;
-    //   text-transform: uppercase;
-    //   padding-left: 38px;
-    //   letter-spacing: 3px;
-    // }
   }
 }
 
@@ -301,11 +284,11 @@ and more scalable.
   }
 
   .menu-icon-bkg {
-    color: rgba($black, 0.5);
+    color: rgba($primary-color, 0.9);
   }
 
   .menu-icon-bars {
-    color: $light-gray;
+    color: $secondary-color;
   }
 }
 
@@ -381,7 +364,7 @@ and more scalable.
   z-index: 1;
   top: 0;
   right: 0;
-  background: lighten($blue, 9%);
+  background: $primary-color;
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -397,11 +380,11 @@ and more scalable.
 
   li {
     text-align: center;
-    border-bottom: 1px solid lighten($blue, 5%);
+    border-bottom: 1px solid $accent-color;
 
     a {
       display: block;
-      color: $text-color;
+      color: $secondary-color;
       text-decoration: none;
       padding: 20px;
       text-transform: uppercase;
@@ -423,6 +406,7 @@ and more scalable.
       font-family: "Font Awesome 5 Pro";
       font-weight: 900;
       padding-left: 6px;
+      margin-right: -12px;
     }
 
     /*
@@ -435,14 +419,18 @@ and more scalable.
     ul.sub-menu {
       margin: 0;
       display: none;
-      background: lighten($blue, 5%);
+      background: lighten($primary-color, 5%);
 
       &.sub-open {
         display: block;
       }
 
       li {
-        border-bottom-color: lighten($blue, 9%);
+        border-bottom-color: $accent-color;
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
       }
     }
   } /* end .menu li */
@@ -452,7 +440,7 @@ and more scalable.
   li.current_page_item,
   li.current_page_ancestor {
     a {
-      color: darken($blue, 9%);
+      color: lighten($secondary-color, 15%);
     }
   } /* end current highlighters */
 } /* end .nav */
@@ -462,7 +450,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-  background: $light-gray;
+  background: lighten($base-color, 10%);
   margin-top: 0;
   font-family: $merriweather;
   font-weight: 300;
@@ -475,20 +463,27 @@ POSTS & CONTENT STYLES
 .section-title {
   font-family: $raleway;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 28px;
   margin-top: 0;
   margin-bottom: 10px;
-  border-bottom: 1px solid $med-gray;
+  border-bottom: 1px solid $secondary-color;
   font-weight: normal;
 }
 
 .section-content {
-  font-size: 14px;
+  font-size: 18px;
   position: relative;
   @include container(100%);
 
   &.entry-content {
-    font-size: 16px;
+    font-size: 18px;
+
+    p {
+      font-size: 18px;
+      &:last-of-type {
+        margin-bottom: 0.5em;
+      }
+    }
   }
 
   &.section-content-bottom {
@@ -497,6 +492,10 @@ POSTS & CONTENT STYLES
 
   p {
     margin-bottom: 5px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   &.featured-portfolio-section {
@@ -511,14 +510,18 @@ POSTS & CONTENT STYLES
       text-decoration: none;
       h4 {
         font-family: $raleway;
-        font-size: 11px;
+        font-size: 16px;
         line-height: 14px;
         text-transform: uppercase;
         text-decoration: none;
         color: $text-color;
-        padding-top: 8px;
+        padding-top: 10px;
       }
     }
+  }
+
+  .primary-btn {
+    margin-top: 1em;
   }
 
   .image-sizer,
@@ -576,7 +579,7 @@ POSTS & CONTENT STYLES
       text-transform: uppercase;
       text-decoration: none;
       font-family: $raleway;
-      font-size: 11px;
+      font-size: 16px;
       line-height: 14px;
       margin: 8px 0 0;
     }
@@ -1201,7 +1204,7 @@ COMMENT STYLES
 
 /* comment reply link */
 .comment-reply-link {
-  @extend .grey-btn;
+  @extend .secondary-btn;
   font-size: 10px;
   float: right;
 
@@ -1292,7 +1295,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 #submit {
-  @extend .blue-btn;
+  @extend .primary-btn;
   float: right;
   // font-size: 1em;
 }
@@ -1367,8 +1370,8 @@ FOOTER STYLES
 .footer {
   clear: both;
   color: $text-color;
-  font-size: 12px;
-  background-color: $blue;
+  font-size: 16px;
+  background-color: $accent-color;
   padding-top: 15px;
 
   // instagram feed
@@ -1412,13 +1415,13 @@ FOOTER STYLES
   text-align: center;
   li {
     display: inline-block;
-    color: darken($blue, 30%);
+    color: darken($secondary-color, 10%);
     a {
       text-decoration: none;
       text-transform: uppercase;
       font-family: $raleway;
       font-weight: bold;
-      color: $dark-blue;
+      color: $secondary-color;
     }
     &:not(:last-of-type):after {
       content: "|";
@@ -1436,7 +1439,7 @@ FOOTER STYLES
     padding: 0 20px;
     a {
       font-size: 22px;
-      color: darken($blue, 25%);
+      color: $secondary-color;
     }
   }
 }
@@ -1444,11 +1447,11 @@ FOOTER STYLES
 .copyright {
   text-align: center;
   line-height: 12px;
-  font-size: 10px;
+  font-size: 12px;
 
   a {
     text-decoration: none;
-    color: $dark-blue;
+    color: $secondary-color;
   }
 }
 
@@ -1485,9 +1488,9 @@ ul#portfolio_filter_gallery_ul {
   li {
     margin: 0;
     a {
-      @extend .blue-inset-btn;
+      @extend .inset-primary-btn;
       &.portfolio_gallery_selected {
-        @extend .blue-btn;
+        @extend .primary-btn;
         box-shadow: none;
       }
     }

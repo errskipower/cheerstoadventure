@@ -39,7 +39,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
     </div>
     <?php if ($button_url): ?>
       <div class="btn-wrap wrap">
-        <a href="<?= $button_url; ?>" alt="<?= $button_text; ?>" class="about-btn more-btn blue-btn"><?= $button_text; ?></a>
+        <a href="<?= $button_url; ?>" alt="<?= $button_text; ?>" class="about-btn more-btn primary-btn"><?= $button_text; ?></a>
       </div>
     <?php endif; ?>
   </div>

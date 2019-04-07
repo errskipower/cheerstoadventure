@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Cheers to Adventure
+Author: Emily Roth
 
 Stylesheet: Variables
 
@@ -13,9 +13,26 @@ No one likes a mess.
 
 /*********************
 COLORS
-Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
+https://coolors.co/bfb5af-ece2d0-702632-d5b9b2-a26769
 *********************/
+
+$black-shadows: #bfb5af;
+$almond: #ece2d0;
+$wine: #702632;
+$dark-vanilla: #d5b9b2;
+$copper-rose: #a26769;
+
+$primary-color: $wine;
+$secondary-color: $dark-vanilla;
+$accent-color: $copper-rose;
+$base-color: $almond;
+
+$link-color: $accent-color;
+$link-hover: darken($link-color, 9%);
+
+
+///////////// OLD 
+
 
 $alert-yellow: #ebe16f;
 $alert-red: #fbe3e4;
@@ -40,15 +57,9 @@ $blue: #d6f1ee;
 $med-blue: darken($blue, 35%);
 $dark-blue: darken($blue, 45%);
 
-$link-color: $text-color;
-$link-hover: darken($link-color, 9%);
-$link-background: $blue;
+// $link-color: $text-color;
+// $link-hover: darken($link-color, 9%);
+// $link-background: $blue;
 
 $border-color: #ccc;
 $disabled-gray: #cfcfcf;
-
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/

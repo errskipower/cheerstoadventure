@@ -18,8 +18,8 @@ understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 ******************************************************************/
 /******************************************************************
-Site Name:
-Author:
+Site Name: Cheers to Adventure
+Author: Emily Roth
 
 Stylesheet: Variables
 
@@ -31,40 +31,18 @@ No one likes a mess.
 ******************************************************************/
 /*********************
 COLORS
-Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
+https://coolors.co/bfb5af-ece2d0-702632-d5b9b2-a26769
 *********************/
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
 /******************************************************************
-Site Name:
-Author:
+Site Name: Cheers to Adventure
+Author: Emily Roth
 
 Stylesheet: Typography
 
-Need to import a font or set of icons for your site? Drop them in
-here or just use this to establish your typographical grid. Or not.
-Do whatever you want to...GOSH!
-
-Helpful Articles:
-http://trentwalton.com/2012/06/19/fluid-type/
-http://ia.net/blog/responsive-typography-the-basics/
-http://alistapart.com/column/responsive-typography-is-a-physical-discipline
-
 ******************************************************************/
 /*********************
-FONT FACE (IN YOUR FACE)
+FONT FACE
 *********************/
-/*  To embed your own fonts, use this syntax
-  and place your fonts inside the
-  library/fonts folder. For more information
-  on embedding fonts, go to:
-  http://www.fontsquirrel.com/
-  Be sure to remove the comment brackets.
-*/
 @font-face {
   font-family: "Playlist";
   src: url("../fonts/Playlist-Script.ttf.woff") format("woff"), url("../fonts/Playlist-Script.ttf.svg#Playlist-Script") format("svg"), url("../fonts/Playlist-Script.ttf.eot"), url("../fonts/Playlist-Script.ttf.eot?#iefix") format("embedded-opentype");
@@ -83,31 +61,11 @@ FONT FACE (IN YOUR FACE)
   font-weight: normal;
   font-style: normal;
 }
-/*  @font-face {
-      font-family: 'Font Name';
-      src: url('library/fonts/font-name.eot');
-      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('library/fonts/font-name.woff') format('woff'),
-             url('library/fonts/font-name.ttf') format('truetype'),
-             url('library/fonts/font-name.svg#font-name') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-*/
-/*
-The following is based of Typebase:
-https://github.com/devinhunt/typebase.css
-I've edited it a bit, but it's a nice starting point.
-*/
-/*
- i imported this one in the functions file so bones would look sweet.
- don't forget to remove it for your site.
-*/
 /*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
-/* line 94, ../scss/partials/_typography.scss */
+/* line 56, ../scss/partials/_typography.scss */
 p {
   -ms-word-wrap: break-word;
   word-break: break-word;
@@ -442,10 +400,10 @@ NAVIGATION STYLES
 PAGES & POSTS
 *********************/
 /* line 183, ../scss/breakpoints/_768up.scss */
-.blue-btn,
-.blue-inset-btn,
-.grey-btn,
-.dark-blue-btn {
+.primary-btn,
+.inset-primary-btn,
+.secondary-btn,
+.dark-primary-btn {
   font-size: 12px;
 }
 

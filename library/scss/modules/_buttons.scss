@@ -31,7 +31,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   text-decoration: none;
   text-transform: uppercase;
   color: $text-color;
-  font-size: 10px;
+  font-size: 16px;
   line-height: 12px;
   font-weight: normal;
   padding: 4px 10px;
@@ -58,26 +58,31 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn {
+.primary-btn {
   @extend %btn; // here we load the btn defaults
-  background-color: $blue;
-  color: darken($blue, 45%);
+  background-color: transparent;
+  color: $link-color;
+  font-weight: bold;
+  padding: 0;
 
   &:hover,
   &:focus,
   &a:hover,
   &a:focus,
   &a:link {
-    color: darken($blue, 45%);
-    background-color: darken($blue, 4%);
+    color: darken($link-color, 45%);
+    background-color: transparent;
   } // end hover
 
   &:active {
-    background-color: darken($blue, 5%);
+    background-color: darken($link-color, 5%);
   } // end active
+  &a {
+    color: $link-color;
+  }
 } // end blue button
 
-.grey-btn {
+.secondary-btn {
   @extend %btn; // here we load the btn defaults
   background-color: $light-gray;
   color: $text-color;
@@ -92,7 +97,7 @@ and it will create a button dependant on those variables.
   } // end active
 } // end blue button
 
-.dark-blue-btn {
+.dark-primary-btn {
   @extend %btn; // here we load the btn defaults
   background-color: darken($blue, 30%);
   color: darken($blue, 80%);
@@ -111,7 +116,7 @@ and it will create a button dependant on those variables.
   } // end active
 } // end blue button
 
-.blue-inset-btn {
+.inset-primary-btn {
   @extend %btn;
   @include box-shadow(0, 0, 0, 1px, $blue, true);
   background-color: transparent;

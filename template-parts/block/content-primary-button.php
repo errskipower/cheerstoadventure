@@ -1,8 +1,8 @@
 <?php
 /**
- * Block Name: Blue Button
+ * Block Name: Primary Button
  *
- * This is the template that displays the blue button.
+ * This is the template that displays the primary button.
  */
 
 $text = get_field('text');
@@ -16,6 +16,6 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 ?>
 
-<a id="<?= $id; ?>" class="intro <?= $align_class; ?> block-content blue-btn" href="<?= $url; ?>" alt="<?= $text; ?>">
+<a id="<?= $id; ?>" class="intro <?= $align_class; ?> block-content primary-btn" href="<?= $url; ?>" alt="<?= $text; ?>">
   <?= $text; ?>
 </a>

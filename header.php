@@ -109,8 +109,6 @@
           <span id="logo" itemscope itemtype="http://schema.org/Organization">
             <a href="<?php echo home_url(); ?>" rel="nofollow">
               <img class="logo-image" src="<?= $logo_image[0]; ?>" alt="<?= $blog_name ?>" />
-            <!-- <span class="logo-script"><?= $first_word; ?></span>
-              <span class="logo-sans"><?= $other_words; ?></span> -->
             </a>
           </span>
 
