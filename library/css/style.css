@@ -2705,12 +2705,12 @@ PRICING STYLES
 PLUS MOBILE DEVICES
 This is for devices like the iPhone Plus, Galaxy S10+.
 *********************/
-@media only screen and (min-width: 391px) {
+@media only screen and (min-width: 310px) {
   /******************************************************************
   Site Name: Cheers to Adventure
   Author: Emily Roth
   
-  Stylesheet: 391px and Up Stylesheet
+  Stylesheet: 360px and Up Stylesheet
   
   This is to fix Instagram footer layout on iPhone 6/7/8 Plus 
   and Galaxy S10+.
@@ -2719,7 +2719,7 @@ This is for devices like the iPhone Plus, Galaxy S10+.
   /*********************
   INSTAGRAM STYLES
   *********************/
-  /* line 17, ../scss/breakpoints/_391up.scss */
+  /* line 17, ../scss/breakpoints/_310up.scss */
   .footer #wdi_feed_0 .wdi_feed_item {
     width: 12.71%;
     margin-top: -7px;

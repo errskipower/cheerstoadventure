@@ -72,9 +72,9 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 PLUS MOBILE DEVICES
 This is for devices like the iPhone Plus, Galaxy S10+.
 *********************/
-@media only screen and (min-width: 391px) {
-  // styles in 391up.scss
-  @import "breakpoints/391up";
+@media only screen and (min-width: 310px) {
+  // styles in 310up.scss
+  @import "breakpoints/310up";
 } // end of media query
 
 /*********************
