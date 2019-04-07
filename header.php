@@ -67,7 +67,12 @@
     <?php endif; ?>
 
     <?php
-      $featured_image_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+      if (is_home() && get_option('page_for_posts') ) {
+        $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')),'full'); 
+        $featured_image_url = $img[0];
+      } else { 
+        $featured_image_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+      }
       $blog_name = get_bloginfo('name');
       // custom logo
       $custom_logo_id = get_theme_mod('custom_logo');
