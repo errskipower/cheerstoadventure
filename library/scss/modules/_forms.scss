@@ -50,7 +50,6 @@ textarea,
   box-shadow: none;
   border: 0;
   width: 100%;
-  max-width: 400px;
   font-family: $merriweather;
   background-color: $secondary-color;
   @include transition(background-color 0.24s ease-in-out);
