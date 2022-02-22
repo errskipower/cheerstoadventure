@@ -1,0 +1,67 @@
+/******************************************************************
+Site Name: Cheers to Adventure
+Author: Emily Roth
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+https://coolors.co/bfb5af-ece2d0-702632-d5b9b2-a26769
+*********************/
+
+$black-shadows: #bfb5af;
+$almond: #ece2d0;
+$wine: #702632;
+$dark-vanilla: #d5b9b2;
+$copper-rose: #a26769;
+
+$primary-color: $wine;
+$secondary-color: $dark-vanilla;
+$accent-color: $copper-rose;
+$base-color: $almond;
+
+$link-color: $accent-color;
+$link-hover: darken($link-color, 9%);
+
+$white: lighten($base-color, 10%);;
+
+
+///////////// OLD 
+
+
+$alert-yellow: #ebe16f;
+$alert-red: #fbe3e4;
+$alert-green: #e6efc2;
+$alert-blue: #d5edf8;
+
+$black: #323944;
+// $white: #fff;
+
+$light-gray: #f5f5f5;
+$gray: #eaedf2;
+$med-gray: #d7dadf;
+$text-color: #161919;
+$meta-gray: #9fa6b4;
+
+$tan: #eceee5;
+
+$green: #7dd667;
+
+$bones-pink: #f01d4f;
+$blue: #d6f1ee;
+$med-blue: darken($blue, 35%);
+$dark-blue: darken($blue, 45%);
+
+// $link-color: $text-color;
+// $link-hover: darken($link-color, 9%);
+// $link-background: $blue;
+
+$border-color: #ccc;
+$disabled-gray: #cfcfcf;

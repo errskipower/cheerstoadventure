@@ -1,0 +1,21 @@
+/******************************************************************
+Site Name: Cheers to Adventure
+Author: Emily Roth
+
+Stylesheet: 310px and Up Stylesheet
+
+This is to fix Instagram footer layout on iPhone 6/7/8 Plus 
+and Galaxy S10+.
+
+******************************************************************/
+
+
+/*********************
+INSTAGRAM STYLES
+*********************/
+.footer #wdi_feed_0 {
+  .wdi_feed_item {
+    width: 12.71%;
+    margin-top: -7px;
+  }
+}

@@ -1,0 +1,1658 @@
+/******************************************************************
+Site Name: Cheers to Adventure
+Author: Emily Roth
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $merriweather;
+  font-size: 100%;
+  line-height: 1.5;
+  color: $text-color;
+  background-color: lighten($base-color, 10%);;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+
+.rtl {
+} /* for sites that are read right to left (i.e. hebrew) */
+.home {
+} /* home page */
+.blog {
+  .recent-post-item {
+    padding: 10px 5px;
+    line-height: 1;
+  }
+
+  .recent-post-sizer {
+    // width: 50%;
+  }
+
+  .recent-title {
+    font-family: $raleway;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .recent-date {
+    font-size: 12px;
+    padding: 6px 0 2px;
+  }
+} /* blog template page */
+.archive {
+} /* archive page */
+.date {
+} /* date archive page */
+.date-paged-1 {
+} /* replace the number to the corresponding page number */
+.search {
+} /* search page */
+.search-results {
+} /* search result page */
+.search-no-results {
+} /* no results search page */
+.search-paged-1 {
+} /* individual paged search (i.e. body.search-paged-3) */
+.error404 {
+} /* 404 page */
+.single {
+} /* single post page */
+.postid-1 {
+} /* individual post page by id (i.e. body.postid-73) */
+.single-paged-1 {
+} /* individual paged single (i.e. body.single-paged-3) */
+.attachment {
+} /* attatchment page */
+.attachmentid-1 {
+} /* individual attatchment page (i.e. body.attachmentid-763) */
+.attachment-mime-type {
+} /* style mime type pages */
+.author {
+} /* author page */
+.author-nicename {
+} /* user nicename (i.e. body.author-samueladams) */
+.author-paged-1 {
+} /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {
+} /* category page */
+.category-1 {
+} /* individual category page (i.e. body.category-6) */
+.category-paged-1 {
+} /* replace the number to the corresponding page number */
+.tag {
+} /* tag page */
+.tag-slug {
+} /* individual tag page (i.e. body.tag-news) */
+.tag-paged-1 {
+} /* replace the number to the corresponding page number */
+.page-template {
+} /* custom page template page */
+.page-template-page-php {
+} /* individual page template (i.e. body.page-template-contact-php */
+.page-paged-1 {
+} /* replace the number to the corresponding page number */
+.page-parent {
+} /* parent page template */
+.page-child {
+} /* child page template */
+.parent-pageid-1 {
+} /* replace the number to the corresponding page number */
+.logged-in {
+} /* if user is logged in */
+.paged {
+} /* paged items like search results or archives */
+.paged-1 {
+} /* individual paged (i.e. body.paged-3) */
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+  width: 96%;
+  margin: 0 auto;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a,
+a:visited {
+  color: $link-color;
+
+  /* on hover */
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  /* on click */
+  &:active {
+  }
+
+  /* mobile tap color */
+  &:link {
+    /*
+    this highlights links on iPhones/iPads.
+    so it basically works like the :hover selector
+    for mobile devices.
+    */
+    -webkit-tap-highlight-color: $link-hover;
+  }
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+
+  /* removing text decoration from all headline links */
+  a {
+    text-decoration: none;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 2.5em;
+  line-height: 1.333em;
+}
+
+h2,
+.h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+}
+
+h3,
+.h3 {
+  font-size: 1.125em;
+}
+
+h4,
+.h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+h5,
+.h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position-x: 30%;
+}
+
+.inner-header {
+  display: table;
+  width: 100%;
+}
+
+#logo {
+  z-index: 1;
+  display: table-cell;
+
+  a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+
+    .logo-image {
+      width: 230px;
+      height: auto;
+    }
+  }
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+.mobile-nav {
+  display: table-cell;
+  text-align: right;
+  vertical-align: top;
+
+  .mobile-nav-title {
+    display: block;
+    padding: 15px;
+    font-size: 14px;
+    text-align: right;
+  }
+
+  .menu-icon-bkg {
+    color: rgba($primary-color, 0.9);
+  }
+
+  .menu-icon-bars {
+    color: $secondary-color;
+  }
+}
+
+.home #container {
+  &.nav-open {
+    margin-right: 205px;
+  }
+}
+
+.blog #container {
+  &.nav-open {
+    #content {
+      position: fixed;
+    }
+  }
+}
+
+#container {
+  transition: margin-right 0.5s;
+
+  &.nav-open {
+    margin-right: 205px;
+    position: fixed;
+    overflow: hidden;
+  }
+}
+
+.side-nav {
+  &.nav-open {
+    width: 205px;
+  }
+}
+
+.single .inner-header {
+  transition: margin-left 0.5s;
+  &.nav-open {
+    margin-left: -35px;
+  }
+}
+
+.home,
+.blog {
+  .inner-header {
+    transition: margin-left 0.5s;
+    &.nav-open {
+      margin-left: -15px;
+    }
+  }
+}
+
+#logo a {
+  transition: margin-left 0.5s;
+  &.nav-open {
+    margin-left: -250px;
+  }
+}
+
+.single-title-wrapper {
+  transition: margin-left 0.5s;
+  &.nav-open {
+    margin-left: -999px;
+  }
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.side-nav-container {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: $primary-color;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.nav {
+  font-family: $raleway;
+}
+
+.top-nav {
+  z-index: 1;
+  border-bottom: 0;
+  margin: 0 auto;
+
+  li {
+    text-align: center;
+    border-bottom: 1px solid $accent-color;
+
+    a {
+      display: block;
+      color: $secondary-color;
+      text-decoration: none;
+      padding: 20px;
+      text-transform: uppercase;
+      font-size: 14px;
+
+      /*
+      remember this is for mobile ONLY, so there's no need
+      to even declare hover styles here, you can do it in
+      the style.scss file where it's relevant. We want to
+      keep this file as small as possible!
+      */
+      &:hover,
+      &:focus {
+      }
+    }
+
+    &.menu-item-has-children > a::after {
+      content: "\f0d7";
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      padding-left: 6px;
+      margin-right: -12px;
+    }
+
+    /*
+    so you really have to rethink your dropdowns for mobile.
+    you don't want to have it expand too much because the
+    screen is so small. How you manage your menu should
+    depend on the project. Here's some great info on it:
+    http://www.alistapart.com/articles/organizing-mobile/
+    */
+    ul.sub-menu {
+      margin: 0;
+      display: none;
+      background: lighten($primary-color, 5%);
+
+      &.sub-open {
+        display: block;
+      }
+
+      li {
+        border-bottom-color: $accent-color;
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+      }
+    }
+  } /* end .menu li */
+
+  /* highlight current page */
+  li.current-menu-item,
+  li.current_page_item,
+  li.current_page_ancestor {
+    a {
+      color: lighten($secondary-color, 15%);
+    }
+  } /* end current highlighters */
+} /* end .nav */
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {
+  background: lighten($base-color, 10%);
+  margin-top: 0;
+  font-family: $merriweather;
+  font-weight: 300;
+}
+
+.block-content:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.section-title {
+  font-family: $raleway;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid $secondary-color;
+  font-weight: normal;
+
+  &.no-title {
+    margin-bottom: 20px;
+  }
+}
+
+.section-content {
+  font-size: 18px;
+  position: relative;
+  @include container(100%);
+
+  &.entry-content {
+    font-size: 18px;
+
+    p {
+      font-size: 18px;
+      &:last-of-type {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+
+  &.section-content-bottom {
+    margin-bottom: 35px;
+  }
+
+  p {
+    margin-bottom: 5px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &.featured-portfolio-section {
+    max-width: 1240px;
+  }
+
+  &.featured-shortcode-section {
+    @include clearfix;
+    text-align: center;
+
+    .portfolio_single_wrapp .mask-contents a {
+      text-decoration: none;
+      h4 {
+        font-family: $raleway;
+        font-size: 16px;
+        line-height: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $text-color;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .primary-btn {
+    margin-top: 1em;
+  }
+
+  .image-sizer,
+  .featured-image {
+    width: 33.333%;
+  }
+
+  .featured-image {
+    float: left;
+    img {
+      display: block;
+      max-width: 100%;
+      padding: 2px;
+      margin-bottom: 0;
+    }
+  }
+
+  .featured-posts .btn-wrap {
+    margin-top: -15px;
+  }
+
+  .featured-posts-list {
+    list-style: none;
+    @include clearfix;
+    text-align: center;
+    margin: 0;
+  }
+
+  .featured-post {
+    margin: 0 0 10px 0;
+    @include gallery(1 of 3);
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+    }
+
+    .featured-post-img-wrap {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 65%;
+
+      img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+
+    .featured-post-title {
+      display: block;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: $raleway;
+      font-size: 16px;
+      line-height: 14px;
+      margin: 8px 0 0;
+    }
+  }
+}
+
+.hentry {
+  header {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    margin: 10px 0;
+    font-size: 12px;
+    color: $secondary-color;
+
+    .signature,
+    .signature-author {
+      font-family: $playlist;
+      display: block;
+      text-align: center;
+      color: $primary-color;
+      line-height: 30px;
+    }
+
+    .signature {
+      font-size: 38px;
+    }
+
+    .signature-author {
+      font-size: 46px;
+      padding-left: 60px;
+      margin-bottom: 20px;
+    }
+
+    .category-tags {
+      margin-top: 40px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      font-size: 10px;
+      font-family: $raleway;
+      text-transform: uppercase;
+      color: $link-color;
+      text-decoration: none;
+    }
+  }
+} /* end .hentry */
+
+.entry-header {
+  margin: 15px 0;
+}
+
+.single-title,
+.page-title,
+.entry-title {
+  margin-bottom: 0;
+  margin-bottom: 0;
+  font-size: 3.75em;
+  font-family: "playlist";
+  line-height: 1em;
+  text-align: center;
+  color: $white;
+  text-shadow: rgba($black, 0.2) 0 0 8px;
+}
+
+.single-title-wrapper {
+  position: absolute;
+  bottom: 8%;
+  width: 100%;
+  .section-title {
+    border-bottom: 0;
+    text-transform: none;
+  }
+}
+
+.page-title {
+}
+
+.entry-title {
+}
+
+.archive-title {
+}
+
+/* want to style individual post classes? Booya! */
+.post-id {
+} /* post by id (i.e. post-3) */
+.post {
+  iframe {
+    display: block;
+	margin: 0 auto;
+  }
+} /* general post style */
+.type-page {
+  margin-top: 30px;
+} /* general article on a page style */
+.page {
+} /* general article on a page style */
+.attachment {
+} /* general style on an attatchment */
+.sticky {
+} /* sticky post style */
+.hentry {
+} /* hentry class */
+.category-slug {
+} /* style by category (i.e. category-videos) */
+.tag-slug {
+} /* style by tag (i.e. tag-news) */
+
+/* post meta */
+.byline {
+  font-family: $raleway;
+  margin: 0;
+  font-size: 12px;
+  color: $primary-color;
+  text-transform: uppercase;
+
+  time {
+  }
+}
+
+/* entry content */
+.entry-content {
+  p {
+    margin: 0 0 1.5em;
+    font-size: 18px;
+  }
+
+  ul,
+  ol,
+  table,
+  dl {
+  }
+
+  ul,
+  ol {
+    margin-left: 20px;
+
+    li {
+      margin: 15px 0;
+    }
+  }
+
+  ul {
+    list-style-type: circle;
+
+    li {
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+
+    li {
+    }
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid $gray;
+    margin-bottom: 1.5em;
+
+    caption {
+      margin: 0 0 7px;
+      font-size: 0.75em;
+      color: $meta-gray;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid $gray;
+
+    &:nth-child(even) {
+      background-color: $light-gray;
+    }
+  }
+
+  td {
+    padding: 7px;
+    border-right: 1px solid $gray;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  th {
+    background-color: $light-gray;
+    border-bottom: 1px solid $gray;
+    border-right: 1px solid $gray;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  blockquote {
+    margin: 0 0 1.5em 0.75em;
+    padding: 0 0 0 0.75em;
+    border-left: 3px solid $blue;
+    font-style: italic;
+    color: $meta-gray;
+
+    &:before {
+    }
+  }
+
+  dl {
+  }
+
+  dt {
+  }
+
+  dd {
+    margin-left: 0;
+    font-size: 0.9em;
+    color: #787878;
+    margin-bottom: 1.5em;
+  }
+
+  img {
+    margin: 0 0 1.5em;
+  }
+
+  /*
+      image alignment on a screen this size may be
+      a bit difficult. It's set to start aligning
+      and floating images at the next breakpoint,
+      but it's up to you. Feel free to change it up.
+      */
+  .alignleft,
+  img.alignleft {
+  }
+  .alignright,
+  img.alignright {
+  }
+  .aligncenter,
+  img.aligncenter {
+  }
+
+  .size-auto,
+  .size-full,
+  .size-large,
+  .size-medium,
+  .size-thumbnail {
+    max-width: 100%;
+    height: auto;
+  }
+
+  pre {
+    background: $black;
+    color: $light-gray;
+    font-size: 0.9em;
+    padding: 1.5em;
+    margin: 0 0 1.5em;
+    border-radius: 3px;
+  }
+} /* end .entry-content */
+
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
+
+  /* images inside wp-caption */
+  img {
+    max-width: 100%;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  p.wp-caption-text {
+    font-size: 0.85em;
+    margin: 4px 0 7px;
+    text-align: center;
+  }
+} /* end .wp-caption */
+
+/* image gallery styles */
+.gallery {
+  dl {
+    a {
+    }
+
+    img {
+    }
+  }
+
+  dt {
+  }
+
+  dd {
+  }
+} /* end .gallery */
+
+/* gallery caption styles */
+.gallery-caption {
+}
+
+.size-full {
+}
+.size-large {
+}
+.size-medium {
+}
+.size-thumbnail {
+}
+
+// the tag output
+.tags {
+  margin: 0;
+}
+
+.youtube-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 20px;
+
+  &.youtube-video-thumbnail {
+    margin-bottom: 0;
+  }
+}
+
+.youtube-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+
+.pagination,
+.wp-prev-next {
+  margin: 1.5em 0;
+}
+.pagination {
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    background-color: rgba($blue, 0.5);
+    white-space: nowrap;
+    padding: 0;
+    clear: both;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+    float: left;
+    display: inline;
+    overflow: hidden;
+    border-right: 2px solid $light-gray;
+  }
+
+  a,
+  span {
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    line-height: 1em;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 8px;
+    min-width: 1em;
+    display: block;
+    color: $dark-blue;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($blue, 0.8);
+    }
+  }
+
+  .next {
+    font-size: 0;
+    padding: 8px;
+    margin-top: 6px;
+    &:after {
+      content: "\f061";
+      font-size: 12px;
+      font-family: "Font Awesome 5 Pro";
+    }
+  }
+
+  .prev {
+    font-size: 0;
+    padding: 8px;
+    margin-top: 6px;
+    &:after {
+      content: "\f060";
+      font-size: 12px;
+      font-family: "Font Awesome 5 Pro";
+    }
+  }
+
+  .current {
+    cursor: default;
+    color: $light-gray;
+    background-color: $dark-blue;
+
+    &:hover,
+    &:focus {
+      background-color: $dark-blue;
+      color: $light-gray;
+    }
+  }
+} /* end .bones_page_navi */
+
+/* fallback previous & next links */
+.wp-prev-next {
+  ul {
+  }
+
+  .prev-link {
+    float: left;
+  }
+
+  .next-link {
+    float: right;
+  }
+} /* end .wp-prev-next */
+
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+.comments-section {
+}
+
+/* h3 comment title */
+#comments-title {
+  margin-bottom: 10px;
+  font-size: 26px;
+  border-bottom: 1px solid $secondary-color;
+
+  /* number of comments span */
+  span {
+  }
+}
+
+.comment-nav {
+  ul {
+    li {
+    }
+  }
+}
+
+.commentlist {
+  margin: 0 0 1.75em 0;
+  list-style-type: none;
+}
+
+.comment:not(.wpcf7-form-control-wrap) {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  padding: 8px 0;
+  background: $secondary-color;
+  margin: 10px 0;
+
+  .comment-author {
+    padding: 0;
+    border: 0;
+  }
+
+  /* vcard */
+  .vcard {
+    margin: 0 0 8px 0;
+
+    cite.fn,
+    cite.fn > .url {
+      font-size: 14px;
+      font-style: normal;
+      font-family: $raleway;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $accent-color;
+      font-weight: bold;
+
+      a.url {
+      }
+    }
+
+    time {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: -5px;
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .photo {
+    }
+
+    .avatar {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  } /* end .commentlist .vcard */
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .children {
+    margin: 0;
+
+    li {
+    }
+
+    /* variations */
+    .comment {
+    }
+    .alt {
+    }
+    .odd {
+    }
+    .even {
+    }
+    .depth-1 {
+    } /* change number for different depth */
+    .byuser {
+    }
+    .bypostauthor {
+    }
+    .comment-author-admin {
+    }
+  } /* end children */
+
+  &[class*="depth-"] {
+    margin-top: 1.1em;
+  }
+
+  &.depth-1 {
+    margin-left: 0;
+  }
+
+  &:not(.depth-1) {
+    background: darken($secondary-color, 4%);
+    padding: 12px 0 10px 15px;
+  }
+
+  &.depth-2 {
+  }
+  &.depth-3 {
+  }
+  &.depth-4 {
+  }
+  &.depth-5 {
+  }
+
+  /* general comment classes */
+  &.alt {
+  }
+  &.odd {
+  }
+  &.even {
+  }
+  &.parent {
+  }
+  &.comment {
+  }
+  &.children {
+  }
+  &.pingback {
+  }
+  &.bypostauthor {
+  }
+  &.comment-author {
+  }
+  &.comment-author-admin {
+  }
+  &.thread-alt {
+  }
+  &.thread-odd {
+  }
+  &.thread-even {
+  }
+}
+
+/* comment meta */
+.comment-meta {
+  a {
+  }
+}
+
+.commentmetadata {
+  a {
+  }
+}
+
+/* comment content */
+.comment_content {
+  p {
+    margin: 0.7335em 0 1em;
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+} /* end .commentlist .comment_content */
+
+/* comment reply link */
+.comment-reply-link {
+  @extend .primary-btn;
+  font-size: 12px;
+  float: right;
+  padding: 0 4px 4px 0;
+
+  &:hover,
+  &:focus {
+  }
+} /* end .commentlist .comment-reply-link */
+
+/* edit comment link */
+.comment-edit-link {
+  float: right;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: $raleway;
+  margin: 7px;
+}
+
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+
+.comments-section {
+  margin: 20px 0;
+}
+
+.comment-respond {
+  @extend .cf;
+}
+
+#reply-title {
+  margin: 0;
+  font-size: 20px;
+  font-family: $raleway;
+  text-transform: uppercase;
+}
+
+.logged-in-as {
+  color: $meta-gray;
+  margin: 0;
+  font-size: 12px;
+
+  a {
+    color: $text-color;
+  }
+}
+
+.comment-form {
+  margin: 0 0 0.75em;
+
+  .logged-in-as {
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  label {
+    text-transform: uppercase;
+    font-family: $raleway;
+    font-size: 14px;
+  }
+
+  textarea {
+    padding: 10px;
+  }
+
+  textarea,
+  input {
+    font-family: $merriweather;
+    background: $secondary-color;
+    font-size: 14px;
+
+    &:focus,
+    &:active {
+      background-color: darken($secondary-color, 4%);
+      outline: none;
+    } // end hover or focus
+  }
+}
+
+.form-allowed-tags {
+  padding: 1.5em;
+  background-color: $light-gray;
+  font-size: 0.9em;
+}
+
+/* comment submit button */
+#submit {
+  @extend .primary-btn;
+  float: right;
+  padding-top: 5px;
+}
+
+/* comment form title */
+#comment-form-title {
+  margin: 0 0 1.1em;
+}
+
+/* cancel comment reply link */
+#cancel-comment-reply {
+  a {
+  }
+}
+
+/* logged in comments */
+.comments-logged-in-as {
+}
+
+/* allowed tags */
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+
+/* no comments */
+.nocomments {
+  margin: 0 20px 1.1em;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+}
+
+.widgettitle {
+}
+
+.widget {
+  ul {
+    li {
+      &:first-child {
+      }
+
+      &:last-child {
+      }
+
+      a {
+      }
+
+      /* deep nesting */
+      ul {
+      }
+    }
+  }
+}
+
+.no-widgets {
+  background-color: $white;
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+  margin-bottom: 1.5em;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+  clear: both;
+  color: $text-color;
+  font-size: 16px;
+  background-color: $accent-color;
+  padding-top: 15px;
+
+  // instagram feed
+  #wdi_feed_0 {
+    margin: 25px 0 10px;
+
+    .wdi_feed_container,
+    .wdi_feed_wrapper {
+      border: none;
+      background: none;
+    }
+
+    .wdi_feed_item {
+      width: 12.76%;
+      margin-top: -6px;
+      margin-left: -1px;
+    }
+
+    .wdi_photo_wrap {
+      padding: 0;
+      width: 100%;
+    }
+
+    .wdi_photo_wrap_inner {
+      border: none;
+      background: none;
+    }
+  }
+}
+
+/*
+  if you checked out the link above:
+  http://www.alistapart.com/articles/organizing-mobile/
+  you'll want to style the footer nav
+  a bit more in-depth. Remember to keep
+  it simple because you'll have to
+  override these styles for the desktop
+  view.
+  */
+.footer-nav {
+  text-align: center;
+  li {
+    display: inline-block;
+    color: darken($secondary-color, 10%);
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: $raleway;
+      font-weight: bold;
+      color: $secondary-color;
+    }
+    &:not(:last-of-type):after {
+      content: "|";
+      padding: 0 2px 0 4px;
+    }
+  }
+} /* end .footer-links */
+
+.social-nav {
+  text-align: center;
+  margin-top: 0;
+
+  li {
+    display: inline-block;
+    padding: 0 20px;
+    a {
+      font-size: 22px;
+      color: $secondary-color;
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  line-height: 12px;
+  font-size: 12px;
+
+  a {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+}
+
+/*********************
+PORTFOLIO STYLES
+*********************/
+.mask-wrapper a .wp-post-image {
+  height: auto;
+}
+
+.section-content.entry-content p.testimonial-author {
+  font-size: 14px;
+}
+
+.testimonial {
+  padding: 10px 0;
+
+  .testimonial-icon {
+    color: $primary-color;
+  }
+
+  .testimonial-author {
+    font-family: $raleway;
+    text-transform: uppercase;
+    text-align: right;
+    color: $primary-color;
+  }
+
+  p.testimonial-text {
+    margin-bottom: 5px;
+  }
+}
+
+ul#portfolio_filter_gallery_ul {
+  margin-top: 0;
+  padding-top: 0;
+  li {
+    margin: 0;
+
+    &:not(:last-of-type) a:after {
+      color: $link-color;
+      content: '|';
+      padding-left: 5px;
+      font-weight: normal;
+      opacity: .2;
+    }
+
+    a {
+      @extend .secondary-btn;
+      &.portfolio_gallery_selected {
+        @extend .primary-btn;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.entry-content .portfolio_designer_id_1 .mask-wrapper .mask a.info span {
+  background-color: transparent;
+  border: 0;
+  color: rgba($white, 0.8);
+}
+
+// content title
+.entry-content
+  .portfolio_filter_class
+  .portfolio_single_wrapp
+  .mask-contents-wrapp
+  a {
+  text-decoration: none;
+  h4 {
+    font-family: $raleway;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+}
+
+.mask-wrapper .mask a.info span {
+  font-size: 30px;
+}
+
+/*********************
+SLICK SLIDER STYLES
+*********************/
+.blog-category-wrapper {
+  margin: 20px auto;
+
+  .recent-img {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 65%;
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}
+
+.blog-category {
+  .slick-prev,
+  .slick-next {
+    &:before {
+      color: $primary-color;
+      font-family: "Font Awesome 5 Pro";
+    }
+  }
+
+  .slick-prev {
+    left: -20px;
+    &:before {
+      content: "\f104";
+    }
+  }
+  .slick-next {
+    right: -20px;
+    &:before {
+      content: "\f105";
+    }
+  }
+}
+
+/*********************
+PRICING STYLES
+*********************/
+.pricing:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.pricings-list {
+  text-align: center;
+
+  button {
+    &:not(:last-of-type):after {
+      color: $link-color;
+      content: '|';
+      padding-left: 5px;
+      font-weight: normal;
+      opacity: .2;
+    }
+  }
+}
+
+.pricing {
+  margin: 35px 0;
+  text-align: center;
+  border-bottom: 1px solid $med-gray;
+
+  .section-title {
+    border-bottom: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.pricing-content-wrap {
+  padding-bottom: 15px;
+}
+
+.pricing-image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 65%;
+  margin-bottom: 25px;
+
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+  }
+}
+
+/*********************
+CONTACT STYLES
+*********************/
+.contact-label {
+  font-family: $raleway;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.wpcf7-submit {
+  @extend .primary-btn;
+  margin-top: 0;
+  padding: 5px 0;
+  font-size: 18px;
+}
+
+.entry-content form p:not(.contact-required):not(:last-of-type) {
+  margin: 1.5em 0 0 0;
+}

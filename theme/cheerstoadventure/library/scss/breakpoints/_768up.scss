@@ -1,0 +1,317 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+/*********************
+HEADER STYLES
+*********************/
+
+#logo {
+  padding: 15px 0 0 10px;
+
+  a {
+    .logo-script {
+      font-size: 92px;
+      line-height: 38px;
+    }
+
+    .logo-sans {
+      font-size: 17px;
+      padding-left: 50px;
+      letter-spacing: 3.5px;
+    }
+  }
+}
+
+.header {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.mobile-nav,
+.side-nav {
+  display: none;
+}
+
+.desktop-nav {
+  display: table-cell;
+  vertical-align: middle;
+  border: 0;
+  padding: 30px 10px 0 0;
+  text-align: right;
+
+  ul {
+    margin-top: 0;
+  }
+
+  li {
+    display: inline-block;
+    position: relative;
+    margin: 0 6px;
+
+    a {
+      color: $white;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-shadow: rgba($black, 0.2) 0 0 10px;
+
+      /*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+      &:hover,
+      &:focus {
+        color: $white;
+        opacity: 0.7;
+      }
+    }
+
+    &:first-child {
+    }
+    &:last-child {
+    }
+
+    /*
+		plan your menus and drop-downs wisely.
+		*/
+    ul.sub-menu,
+    ul.children {
+      margin-top: 0;
+      position: absolute;
+      visibility: hidden;
+      z-index: 1;
+
+      li {
+        display: block;
+        margin-left: 0;
+
+        a {
+          display: block;
+          padding: 8px 0;
+          line-height: 1;
+          text-align: left;
+
+          &:hover,
+          &:focus {
+          }
+
+          &:link {
+          }
+        }
+
+        &:first-child {
+        }
+
+        &:last-child {
+          a {
+            border-bottom: 0;
+          }
+        }
+
+        /*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+        ul {
+          top: 0;
+          left: 100%;
+        }
+      }
+
+      /* highlight sub-menu current page */
+      li.current-menu-item,
+      li.current_page_item,
+      li.current-menu-ancestor,
+      li.current-menu-parent {
+        > a {
+          color: $white;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    /* showing sub-menus */
+    &:hover > ul {
+      top: auto;
+      visibility: visible;
+    }
+  } /* end .menu ul li */
+
+  /* highlight current page */
+  li.current-menu-item,
+  li.current_page_item,
+  li.current-menu-ancestor,
+  li.current-menu-parent {
+    > a {
+      color: $white;
+      opacity: 0.5;
+    }
+  } /* end current highlighters */
+} /* end .nav */
+
+/*********************
+PAGES & POSTS
+*********************/
+
+.section-content.entry-content p,
+.section-content.entry-content,
+.entry-content p {
+  font-size: 16px;
+}
+
+.primary-btn,
+.inset-primary-btn,
+.secondary-btn,
+.dark-primary-btn {
+  font-size: 16px;
+}
+
+.single-title-wrapper {
+  bottom: 5%;
+}
+
+.section-title {
+  font-size: 26px;
+  margin-top: 50px;
+
+  &:first-of-type {
+    margin-top: 30px;
+  }
+}
+
+.section-content {
+  &.featured-videos-section {
+    .featured-video {
+      @include gallery(1 of 3);
+    }
+  }
+
+  .featured-posts-list {
+    margin: 0 0 26px 0;
+  }
+
+  .featured-post-img-wrap {
+    background: $text-color;
+  }
+}
+
+.section-content.entry-content p.testimonial-author {
+  font-size: 12px;
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-nav {
+  li:not(:last-of-type):after {
+    padding-left: 6px;
+  }
+}
+
+.social-nav,
+.footer-nav {
+  li {
+    a {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.footer {
+  // instagram feed
+  #wdi_feed_0 {
+    .wdi_feed_item {
+      width: 12.5%;
+      margin-left: 0;
+    }
+  }
+}
+
+.testimonial .testimonial-author {
+  font-size: 12px;
+}
+
+/*********************
+PRICING STYLES
+*********************/
+
+.pricing-image-wrap {
+  width: 30%;
+  display: inline-block;
+  float: left;
+
+  img {
+    width: 100%;
+  }
+}
+
+.pricing-content-wrap {
+  display: inline-block;
+  width: 65%;
+  margin-left: 5%;
+
+  .section-title:first-of-type {
+    margin-top: -10px;
+  }
+}
+
+/*********************
+COMMENT STYLES
+*********************/
+#comments-title {
+  font-size: 24px;
+}
+  
+.comment:not(.wpcf7-form-control-wrap) { 
+  cite.fn,
+  cite.fn > .url {
+    font-size: 12px;
+  }
+  time {
+    font-size: 10px;
+  }
+}
+
+.comment_content p {
+  font-size: 12px;
+}
+
+.comment-reply-link,
+#submit {
+  font-size: 14px;
+}

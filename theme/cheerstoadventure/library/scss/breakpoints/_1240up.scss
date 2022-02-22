@@ -1,0 +1,57 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+
+#logo {
+}
+
+.desktop-nav {
+  padding-top: 45px;
+  font-size: 20px;
+  li {
+    margin: 0 16px;
+  }
+}
+
+.post, article.page {
+  width: 80%;
+  margin: 30px auto 0;
+  max-width: 1200px;
+}
+
+
+.section-content {
+  font-size: 16px;
+
+  &.featured-shortcode-section .portfolio_single_wrapp .mask-contents a h4,
+  .featured-post .featured-post-title {
+    font-size: 14px;
+  }
+
+  .featured-post .featured-post-title {
+    margin-top: 15px;
+  }
+
+  .featured-post-img-wrap {
+    background: none;
+
+    img {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}
+
+.footer {
+  padding-top: 14px;
+}
